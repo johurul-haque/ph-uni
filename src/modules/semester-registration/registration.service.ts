@@ -1,6 +1,5 @@
 import { SemesterModel } from '@modules/semester/semester.model';
 import { AppError } from '@utils';
-import { Types } from 'mongoose';
 import { SemesterRegistration } from './registration.interface';
 import { RegistrationModel } from './registration.model';
 
@@ -29,7 +28,7 @@ export async function register(payload: SemesterRegistration) {
 }
 
 export async function update(
-  id: Types.ObjectId,
+  id: string,
   payload: Partial<SemesterRegistration>
 ) {
   const doc = await RegistrationModel.findById(id);

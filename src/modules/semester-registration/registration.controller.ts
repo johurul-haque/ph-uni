@@ -18,5 +18,10 @@ export const updateSemesterRegistration = catchAsync(async function (
   req: Request,
   res: Response
 ) {
-  
+ const result = await registrationServices.update(req.params.id, req.body);
+
+ sendResponse(res, {
+   data: result,
+   message: 'Registration updated successfully',
+ });
 });
