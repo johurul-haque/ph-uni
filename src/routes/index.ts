@@ -3,6 +3,7 @@ import { FacultyRoutes } from '@modules/faculty/faculty.route';
 import { RegistrationRoutes } from '@modules/semester-registration/registration.route';
 import { SemesterRoutes } from '@modules/semester/semester.route';
 import { StudentRoutes } from '@modules/student/student.route';
+import { UploadRoutes } from '@modules/upload/upload.route';
 import { UserRoutes } from '@modules/user/user.route';
 import { Router } from 'express';
 
@@ -14,6 +15,7 @@ router.use('/semesters', SemesterRoutes);
 router.use('/faculty', FacultyRoutes);
 router.use('/department', DepartmentRoutes);
 router.use('/semester-registration', RegistrationRoutes);
+router.use('/upload', UploadRoutes);
 
 
 export default router;
